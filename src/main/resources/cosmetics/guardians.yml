@@ -1,0 +1,59 @@
+#╔═══════════════════════════════════════╗
+#║            Guardian Angel             ║
+#╚═══════════════════════════════════════╝
+ANGEL:
+  DISPLAY-NAME: "&b&lAngel"
+  HEAD:
+    ENABLE: TRUE
+    VALUE: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTJiZmFmMjQwMWFmODk5MDVlNjVhNWUxNDRjZjYxMWQ5MjViZGFjMjI0NTZkZGQyZmNmYmQ1ODVhMWE5NzAxIn19fQ=="
+  HELMET:
+    MATERIAL: LEATHER_HELMET
+    COLOR: BLUE
+  CHESTPLATE:
+    MATERIAL: LEATHER_LEGGINGS
+    COLOR: BLUE
+  LEGGINGS:
+    MATERIAL: LEATHER_LEGGINGS
+    COLOR: BLUE
+  BOOTS:
+    MATERIAL: LEATHER_BOOTS
+    COLOR: BLUE
+  DISTANCE: #the central point is the position of the player
+    SIDE: 0.8 #left is greater than zero
+    FRONTAL: 0 #forward is greater than zero
+    HEIGHT: 0.7 #up is greater than zero
+  ANIMATION:
+    DISPLACEMENT:
+      ENABLE: TRUE
+      TIME: 1.0 #time for the balloon to go up and down completely, the format is in seconds
+      RANGE: 0.5 #displacement range, one block is equal to 1.0
+#╔═══════════════════════════════════════╗
+#║            Guardian Devil             ║
+#╚═══════════════════════════════════════╝
+DEVIL:
+  DISPLAY-NAME: "&c&lDevil"
+  HEAD:
+    ENABLE: TRUE
+    VALUE: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGYwN2FhNDk2MTdhMTIyNTIzMDc1NWUxNWMwNTIwMzE5ZGE4NWZjNGZhOGYxZGViMTM5NzgwOGNjMDZjMTkzMyJ9fX0="
+  HELMET:
+    MATERIAL: LEATHER_HELMET
+    COLOR: BLUE
+  CHESTPLATE:
+    MATERIAL: LEATHER_CHESTPLATE
+    COLOR: RED
+  LEGGINGS:
+    MATERIAL: LEATHER_LEGGINGS
+    COLOR: RED
+  BOOTS:
+    MATERIAL: LEATHER_BOOTS
+    COLOR: RED
+  DISTANCE:
+    SIDE: 0.8
+    FRONTAL: 0
+    HEIGHT: 0.7
+  ANIMATION:
+    DISPLACEMENT:
+      ENABLE: TRUE
+      TIME: 1.0
+      RANGE: 0.5
+#do you want to create another guardian? Just copy the one above, paste it here, and change the name.

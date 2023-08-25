@@ -1,0 +1,52 @@
+#╔═══════════════════════════════════════╗
+#║            Cosmetics Menu             ║
+#╚═══════════════════════════════════════╝
+COSMETICS-MENU:
+  TITLE: "&0Cosmetics"
+  FILL:
+    ENABLE: TRUE
+    TITLE: "&0"
+    MATERIAL: BLACK_STAINED_GLASS_PANE
+  ITEMS:
+    BALLOONS-ITEM:
+      SLOT: 11
+      TITLE: "&4&lBalloons"
+      LORE:
+        - "&7&oclick to open balloons menu"
+    OUTFITS-ITEM:
+      SLOT: 13
+      TITLE: "&4&lOutfits"
+      LORE:
+        - "&7&oclick to open outfits menu"
+    GUARDIANS-ITEM:
+      SLOT: 15
+      TITLE: "&4&lGuardians"
+      LORE:
+        - "&7&oclick to open guardians menu"
+#╔═══════════════════════════════════════╗
+#║             Balloons Menu             ║
+#╚═══════════════════════════════════════╝
+BALLOONS-MENU:
+  TITLE: "&0Balloons"
+  BALLOON-ITEM:
+    TITLE: "&4&lBalloon %BALLOON%"
+    LORE:
+      - "&7&oclick to use %BALLOON% &7balloon."
+#╔═══════════════════════════════════════╗
+#║            Guardians Menu             ║
+#╚═══════════════════════════════════════╝
+GUARDIANS-MENU:
+  TITLE: "&0Guardians"
+  GUARDIAN-ITEM:
+    TITLE: "&4&lGuardian %GUARDIAN%"
+    LORE:
+      - "&7&oclick to use %GUARDIAN% &7guardian."
+#╔═══════════════════════════════════════╗
+#║              Outfits Menu             ║
+#╚═══════════════════════════════════════╝
+OUTFITS-MENU:
+  TITLE: "&0Outfits"
+  OUTFIT-ITEM:
+    TITLE: "&4&lOutfit %OUTFIT%"
+    LORE:
+      - "&7&oclick to use %OUTFIT% &7outfit."

@@ -1,0 +1,69 @@
+#╔═══════════════════════════════════════╗
+#║             Outfit Diamond            ║
+#╚═══════════════════════════════════════╝
+DIAMOND:
+  DISPLAY-NAME: "&b&lDiamond"
+  HELMET:
+    MATERIAL: DIAMOND_HELMET #If the material is leather, the color will work
+    COLOR: YELLOW #Name of a color from the colors.yml file
+  CHESTPLATE:
+    MATERIAL: DIAMOND_CHESTPLATE
+    COLOR: YELLOW
+  LEGGINGS:
+    MATERIAL: DIAMOND_LEGGINGS
+    COLOR: BLUE
+  BOOTS:
+    MATERIAL: DIAMOND_BOOTS
+    COLOR: RED
+#╔═══════════════════════════════════════╗
+#║            Outfit Colombia            ║
+#╚═══════════════════════════════════════╝
+COLOMBIA:
+  DISPLAY-NAME: "&e&lCo&9&llom&c&lbia"
+  HELMET:
+    MATERIAL: LEATHER_HELMET
+    COLOR: YELLOW
+  CHESTPLATE:
+    MATERIAL: LEATHER_CHESTPLATE
+    COLOR: YELLOW
+  LEGGINGS:
+    MATERIAL: LEATHER_LEGGINGS
+    COLOR: BLUE
+  BOOTS:
+    MATERIAL: LEATHER_BOOTS
+    COLOR: RED
+#╔═══════════════════════════════════════╗
+#║            Outfit Rainbow             ║
+#╚═══════════════════════════════════════╝
+RAINBOW:
+  DISPLAY-NAME: "&c&lR&e&la&a&li&9&ln&d&lb&6&lo&3&lw"
+  HELMET:
+    MATERIAL: LEATHER_HELMET
+    COLOR: RAINBOW
+  CHESTPLATE:
+    MATERIAL: LEATHER_CHESTPLATE
+    COLOR: RAINBOW
+  LEGGINGS:
+    MATERIAL: LEATHER_LEGGINGS
+    COLOR: RAINBOW
+  BOOTS:
+    MATERIAL: LEATHER_BOOTS
+    COLOR: RAINBOW
+#╔═══════════════════════════════════════╗
+#║             Outfit WaveRed            ║
+#╚═══════════════════════════════════════╝
+WAVE-RED:
+  DISPLAY-NAME: "&4&lWaveRed"
+  HELMET:
+    MATERIAL: LEATHER_HELMET
+    COLOR: WAVE-EFFECT-1
+  CHESTPLATE:
+    MATERIAL: LEATHER_CHESTPLATE
+    COLOR: WAVE-EFFECT-2
+  LEGGINGS:
+    MATERIAL: LEATHER_LEGGINGS
+    COLOR: WAVE-EFFECT-3
+  BOOTS:
+    MATERIAL: LEATHER_BOOTS
+    COLOR: WAVE-EFFECT-4
+#do you want to create another outfit? Just copy the one above, paste it here, and change the name.

@@ -1,0 +1,28 @@
+#╔═══════════════════════════════════════╗
+#║            Balloon Messages           ║
+#╚═══════════════════════════════════════╝
+BALLOON:
+  ENABLE: "&aBalloon %BALLOON% &aactivated."
+  DISABLE: "&cBalloon %BALLOON% &cdeactivated."
+  NOT-EXIST: "&4The balloon %BALLOON% &4does not exist"
+#╔═══════════════════════════════════════╗
+#║            Guardian Messages          ║
+#╚═══════════════════════════════════════╝
+GUARDIAN:
+  ENABLE: "&aGuardian %GUARDIAN% &aactivated."
+  DISABLE: "&cGuardian %GUARDIAN% &cdeactivated."
+  NOT-EXIST: "&4The guardian %GUARDIAN% does not exist"
+#╔═══════════════════════════════════════╗
+#║             Outfit Messages           ║
+#╚═══════════════════════════════════════╝
+OUTFIT:
+  ENABLE: "&aOutfit %OUTFIT% &aactivated."
+  DISABLE: "&cOutfit %OUTFIT% &cdeactivated."
+  NOT-EXIST: "&4The outfit %OUTFIT% &4does not exist"
+#╔═══════════════════════════════════════╗
+#║             Mascot Messages           ║
+#╚═══════════════════════════════════════╝
+MASCOT:
+  ENABLE: "&aMascot %MASCOT% &aactivated."
+  DISABLE: "&cMascot %MASCOT% &cdeactivated."
+  NOT-EXIST: "&4The mascot %MASCOT% &4does not exist"

@@ -1,0 +1,37 @@
+#╔═══════════════════════════════════════╗
+#║            Balloon Colombia           ║
+#╚═══════════════════════════════════════╝
+COLOMBIA:
+  DISPLAY-NAME: "&e&lColombia"
+  HEAD-VALUE: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzcyMTIwYjlmZTc3ZDc3MGIyNTRiMzljN2JlOWIxY2VjY2VmNmFkZmU3YTVjYzY4OWFiMWZkMjNlM2MifX19"
+  DISTANCE: #the center point is the position of the player, one block is equal to 1.0
+    SIDE: -1.5 #left is greater than zero
+    FRONTAL: 1.5 #forward is greater than zero
+    HEIGHT: 1.5 #up is greater than zero
+  ANIMATION:
+    ROTATION:
+      ENABLE: TRUE
+      TIME: 5.0 #time for the globe to rotate completely, the format is in seconds
+    DISPLACEMENT:
+      ENABLE: TRUE
+      TIME: 1.5 #time for the balloon to go up and down completely, the format is in seconds
+      RANGE: 0.8 #displacement range, one block is equal to 1.0
+#╔═══════════════════════════════════════╗
+#║              Balloon TNT              ║
+#╚═══════════════════════════════════════╝
+TNT:
+  DISPLAY-NAME: "&c&lTNT"
+  HEAD-VALUE: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDgxNzliMTc1ZGFhNzlmNzNjNjY1YjYxMTYzMzY0ZjY2MjdlM2QwMmI3MjUzZDQyN2ViZDJmZjY4MThkZTZjZSJ9fX0="
+  DISTANCE:
+    SIDE: -1.5
+    FRONTAL: 1.5
+    HEIGHT: 1.5
+  ANIMATION:
+    ROTATION:
+      ENABLE: TRUE
+      TIME: 5.0
+    DISPLACEMENT:
+      ENABLE: TRUE
+      TIME: 1.5
+      RANGE: 0.8
+#do you want to create another balloon? Just copy the one above, paste it here, and change the name.

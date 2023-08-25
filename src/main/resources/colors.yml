@@ -1,0 +1,67 @@
+#╔═══════════════════════════════════════╗
+#║                Colors                 ║
+#╚═══════════════════════════════════════╝
+YELLOW:
+  TIME: 1
+  COLORS:
+    - "255-255-0"
+BLUE:
+  TIME: 1
+  COLORS:
+    - "0-0-255"
+RED:
+  TIME: 1
+  COLORS:
+    - "255-0-0"
+#╔═══════════════════════════════════════╗
+#║             Rainbow Effect            ║
+#╚═══════════════════════════════════════╝
+RAINBOW:
+  TIME: 10 #duration it will take to go through all the colors
+  COLORS: #format color "R-G-B" https://www.rapidtables.com/web/color/RGB_Color.html
+    - "255-0-0" #RED
+    - "255-255-0" #YELLOW
+    - "0-255-0" #GREEN
+    - "0-0-255" #BLUE
+    - "255-0-255" #VIOLET
+    - "255-0-0" #RED
+#╔═══════════════════════════════════════╗
+#║              Wave Effect              ║
+#╚═══════════════════════════════════════╝
+WAVE-EFFECT-1:
+  TIME: 4
+  COLORS:
+    - "0-0-0"
+    - "255-0-0"
+    - "0-0-0"
+    - "0-0-0"
+    - "0-0-0"
+    - "0-0-0"
+WAVE-EFFECT-2:
+  TIME: 4
+  COLORS:
+    - "0-0-0"
+    - "0-0-0"
+    - "255-0-0"
+    - "0-0-0"
+    - "0-0-0"
+    - "0-0-0"
+WAVE-EFFECT-3:
+  TIME: 4
+  COLORS:
+    - "0-0-0"
+    - "0-0-0"
+    - "0-0-0"
+    - "255-0-0"
+    - "0-0-0"
+    - "0-0-0"
+WAVE-EFFECT-4:
+  TIME: 4
+  COLORS:
+    - "0-0-0"
+    - "0-0-0"
+    - "0-0-0"
+    - "0-0-0"
+    - "255-0-0"
+    - "0-0-0"
+#you can create new colors and play with them to create new effects, let your imagination run wild :D
