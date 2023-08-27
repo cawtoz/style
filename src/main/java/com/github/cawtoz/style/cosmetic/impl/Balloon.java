@@ -10,6 +10,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.Location;
 import org.bukkit.entity.ArmorStand;
+import org.bukkit.entity.Chicken;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.potion.PotionEffectType;
@@ -74,6 +75,7 @@ public class Balloon extends CosmeticTeleportable {
         armorStandBalloon.setHelmet(HeadUtil.createCustomSkull(headValue));
         armorStandBalloon.setVisible(false);
         armorStandBalloon.setGravity(false);
+        armorStandBalloon.setMarker(true);
 
         //Leash
         leashEntityBalloon = (LivingEntity) getLocation().getWorld().spawnEntity(leashBalonLocation, EntityType.CHICKEN);
@@ -83,6 +85,7 @@ public class Balloon extends CosmeticTeleportable {
         entity.setBoolean("NoAI", true);
         entity.setBoolean("Gravity", false);
         entity.setBoolean("Invulnerable", true);
+        ((Chicken) leashEntityBalloon).setAgeLock(true);
         leashEntityBalloon.setLeashHolder(getPlayer());
 
         return this;

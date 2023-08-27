@@ -12,8 +12,6 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-import org.bukkit.Bukkit;
-import org.bukkit.plugin.Plugin;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -28,9 +26,9 @@ import java.util.List;
 public class License {
 
     @Getter
-    private final boolean enabled;
-    private final URI host = URI.create("");
-    private final String apiKey = "";
+    private String enabled;
+    private final URI host = URI.create("http://129.146.254.201:3000/api/client");
+    private final String apiKey = "7d111fa6-c2a4-4a5f-b7cc-efb3d6f57ff3";
     private final String licenseKey;
     private final String product = Style.getInstance().getDescription().getName();
     private final String version = Style.getInstance().getDescription().getVersion();
@@ -39,20 +37,10 @@ public class License {
     public License() {
         FileManager.loadFile("license.yml");
         licenseKey = FileUtil.getString("license", "LICENSE-KEY");
-        enabled = check();
-        ChatUtil.sendConsole(
-                " ",
-                "&8------------- &6" + product + " &fv" + version + " &8-------------",
-                "&6 Authors&8: &f" + Style.getInstance().getDescription().getAuthors(),
-                (enabled) ? "&6 Status&8: &aEnabled" :"&6 Status&8: &cDisabled",
-                "&6 License&8: &f" + licenseKey,
-                "&6 Support&8: &fdiscord.gg/ZzvcNqrSXA",
-                "&8----------------------------------------",
-                " "
-        );
+        check();
     }
 
-    private boolean check() {
+    private void check() {
 
         HttpPost post = new HttpPost(host);
 
@@ -65,7 +53,7 @@ public class License {
         try {
             post.setEntity(new UrlEncodedFormEntity(urlParameters));
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            enabled = "&cError";
         }
 
         post.setHeader("Authorization", apiKey);
@@ -74,26 +62,35 @@ public class License {
             String data = EntityUtils.toString(response.getEntity());
             JSONObject obj = new JSONObject(data);
 
-            System.out.println(data);
-
-            if(!obj.has("status_msg") || !obj.has("status_id")) {
-                return false;
+            if((!obj.has("status_msg") || !obj.has("status_id")) || obj.getString("status_overview") == null) {
+                enabled = "&cDisabled";
+                sendPluginInfo();
+                return;
             }
-
-            if(obj.getString("status_overview") == null){
-                return false;
-            }
-
-            return true;
 
         } catch (IOException e) {
-            e.printStackTrace();
-            return false;
+            enabled = "&4License Verification Error";
+            sendPluginInfo();
+            return;
         }
+
+        enabled = "&aEnabled";
+        sendPluginInfo();
 
     }
 
-
+    public void sendPluginInfo() {
+        CC.sendConsole(
+                " ",
+                "&8--------- &6" + product + " &fv" + version + " &8---------",
+                "&6 Authors&8: &f" + Style.getInstance().getDescription().getAuthors(),
+                "&6 Status&8: " + enabled,
+                "&6 License&8: &f" + licenseKey,
+                "&6 Support&8: &fdiscord.gg/7KA9892Y9q",
+                "&8-----------------------------------------",
+                " "
+        );
+    }
 
     private String generateHWID() {
         StringBuilder hwidBuilder = new StringBuilder();

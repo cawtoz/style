@@ -11,6 +11,7 @@ import lombok.Setter;
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.List;
@@ -25,10 +26,10 @@ public abstract class CosmeticEquippable extends Cosmetic {
     private ItemStack leggings;
     private ItemStack boots;
 
-    private List<Color> colorHelmet;
-    private List<Color> colorChestPlate;
-    private List<Color> colorLeggings;
-    private List<Color> colorBoots;
+    private List<Color> colorsHelmet;
+    private List<Color> colorsChestPlate;
+    private List<Color> colorsLeggings;
+    private List<Color> colorsBoots;
 
     private int stepsHelmet;
     private int stepsChetPlate;
@@ -49,10 +50,10 @@ public abstract class CosmeticEquippable extends Cosmetic {
         leggings = new ItemStack(FileUtil.getMaterial(file, name + ".LEGGINGS.MATERIAL"));
         boots = new ItemStack(FileUtil.getMaterial(file, name + ".BOOTS.MATERIAL"));
 
-        colorHelmet = FileUtil.getColors(file, name + ".HELMET.COLOR");
-        colorChestPlate = FileUtil.getColors(file, name + ".CHESTPLATE.COLOR");
-        colorLeggings = FileUtil.getColors(file, name + ".LEGGINGS.COLOR");
-        colorBoots = FileUtil.getColors(file, name + ".BOOTS.COLOR");
+        colorsHelmet = FileUtil.getColors(file, name + ".HELMET.COLOR");
+        colorsChestPlate = FileUtil.getColors(file, name + ".CHESTPLATE.COLOR");
+        colorsLeggings = FileUtil.getColors(file, name + ".LEGGINGS.COLOR");
+        colorsBoots = FileUtil.getColors(file, name + ".BOOTS.COLOR");
 
         stepsHelmet = FileUtil.getInt("colors", FileUtil.getString(file, name + ".HELMET.COLOR") + ".TIME") * 20;
         stepsChetPlate = FileUtil.getInt("colors", FileUtil.getString(file, name + ".CHESTPLATE.COLOR") + ".TIME") * 20;
@@ -62,10 +63,10 @@ public abstract class CosmeticEquippable extends Cosmetic {
 
     public void updateArmor() {
         changeColor();
-        entityEquippable.getEquipment().setHelmet(getHelmet());
-        entityEquippable.getEquipment().setChestplate(getChestPlate());
-        entityEquippable.getEquipment().setLeggings(getLeggings());
-        entityEquippable.getEquipment().setBoots(getBoots());
+        entityEquippable.getEquipment().setHelmet(helmet);
+        entityEquippable.getEquipment().setChestplate(chestPlate);
+        entityEquippable.getEquipment().setLeggings(leggings);
+        entityEquippable.getEquipment().setBoots(boots);
     }
 
     private void changeColor() {
@@ -74,10 +75,10 @@ public abstract class CosmeticEquippable extends Cosmetic {
         double progressLeggings = (double) currentStepLeggings / stepsLeggings;
         double progressBoots = (double) currentStepBoots / stepsBoots;
 
-        new ItemBuilder(getHelmet()).setColor(ColorUtil.getNextColor(getColorHelmet(), progressHelmet));
-        new ItemBuilder(getChestPlate()).setColor(ColorUtil.getNextColor(getColorChestPlate(), progressChetPlate));
-        new ItemBuilder(getLeggings()).setColor(ColorUtil.getNextColor(getColorLeggings(), progressLeggings));
-        new ItemBuilder(getBoots()).setColor(ColorUtil.getNextColor(getColorBoots(), progressBoots));
+        new ItemBuilder(helmet).setColor(ColorUtil.getNextColor(colorsHelmet, progressHelmet));
+        new ItemBuilder(chestPlate).setColor(ColorUtil.getNextColor(colorsChestPlate, progressChetPlate));
+        new ItemBuilder(leggings).setColor(ColorUtil.getNextColor(colorsLeggings, progressLeggings));
+        new ItemBuilder(boots).setColor(ColorUtil.getNextColor(colorsBoots, progressBoots));
 
         currentStepHelmet = getNextStep(currentStepHelmet, stepsHelmet);
         currentStepChetPlate = getNextStep(currentStepChetPlate, stepsChetPlate);

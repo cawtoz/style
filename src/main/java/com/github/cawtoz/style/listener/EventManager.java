@@ -11,6 +11,7 @@ public class EventManager {
     public void register() {
         addListener(new PlayerListener());
         addListener(new InventoryListener());
+        addListener(new BalloonListener());
         addListener(new MenuListener(Style.getInstance()));
     }
 

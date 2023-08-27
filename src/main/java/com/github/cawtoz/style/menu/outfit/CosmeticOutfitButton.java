@@ -23,7 +23,7 @@ public class CosmeticOutfitButton extends Button {
     @Override
     public ItemStack getButtonItem(Player player) {
         return new ItemBuilder(outfit.getChestPlate())
-                .setColor(outfit.getColorChestPlate().get(0))
+                .setColor(outfit.getColorsChestPlate().get(0))
                 .setName(FileUtil.getString("menus", "OUTFITS-MENU.OUTFIT-ITEM.TITLE", "%OUTFIT%", outfit.getDisplayName()))
                 .setLore(FileUtil.getStringList("menus", "OUTFITS-MENU.OUTFIT-ITEM.LORE", "%OUTFIT%", outfit.getDisplayName()))
                 .build();

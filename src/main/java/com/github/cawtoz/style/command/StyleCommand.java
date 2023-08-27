@@ -33,7 +33,7 @@ public class StyleCommand extends BaseCommand {
                 "&6&l STYLE INFO",
                 "&6&l ┏━▶ &eAuthors &f" + Style.getInstance().getDescription().getAuthors(),
                 "&6&l ┣━▶ &eVersion &f" + Style.getInstance().getDescription().getVersion(),
-                "&6&l ┣━▶ &eSupport &fhttps://discord.gg/ZzvcNqrSXA",
+                "&6&l ┣━▶ &eSupport &fhttps://discord.gg/7KA9892Y9q",
                 "&6&l ┗━▶ &e/style help &fto see all commands.",
                 "&8&m                                                                      "
         );

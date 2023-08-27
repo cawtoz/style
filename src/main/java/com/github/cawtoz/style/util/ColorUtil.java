@@ -21,6 +21,7 @@ public class ColorUtil {
     }
 
     public Color getNextColor(List<Color> colors, double progress) {
+
         int size = colors.size();
         int currentIndex = (int) (progress * (size - 1));
         int nextIndex = (currentIndex + 1) % size;

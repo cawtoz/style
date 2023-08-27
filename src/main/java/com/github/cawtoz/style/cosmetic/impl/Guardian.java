@@ -71,6 +71,7 @@ public class Guardian extends CosmeticEquippableTeleportable {
         armorStandAngel.setSmall(true);
         armorStandAngel.setVisible(false);
         armorStandAngel.setGravity(false);
+        armorStandAngel.setMarker(true);
         setEntityEquippable(armorStandAngel);
         if (headEnable) setHelmet(HeadUtil.createCustomSkull(headValue));
         updateArmor();

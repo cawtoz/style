@@ -14,7 +14,10 @@ public class Style extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        if (new License().isEnabled()) getPluginLoader().disablePlugin(this);
+        if (!new License().getEnabled().equals("&aEnabled")) {
+            getPluginLoader().disablePlugin(this);
+            return;
+        }
         FileManager.loadFiles();
         CommandManager.register();
         EventManager.register();
